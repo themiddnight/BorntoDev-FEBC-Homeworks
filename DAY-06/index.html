@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mango</title>
+</head>
+<body>
+    <div class="sticky card">
+        <table class="head-menu-table">
+            <tr>
+                <td class="head-item"><a href="index.html">🥭</a></td>
+                <td class="head-item"><a href="list_mac.html">xMac</a></td>
+                <td class="head-item"><a href="list_pad.html">xPad</a></td>
+                <td class="head-item"><a href="list_phone.html">xPhone</a></td>
+                <td class="head-item"><a name="buyBtn">xWatch</a></td>
+                <td class="head-item"><a name="buyBtn">xPods</a></td>
+                <td class="head-item"><a name="buyBtn">xTV</a></td>
+                <td class="head-item"><a name="buyBtn">🔍</a></td>
+                <td class="head-item"><a name="buyBtn">🛒</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- main product -->
+    <div class="product-panel card">
+        <h1>xBook Air รุ่น 15"</h1>
+        <p>ใหญ่จัง ตังหมดบัญชี</p>
+        <table class="product-panel-link">
+            <tr>
+                <td><a href="prod_book.html">ดูเพิ่มเติม</a></td>
+                <td><a name="buyBtn">ซื้อ</a></td>
+            </tr>
+        </table>
+        <div class="product-panel-img">
+            <img src="image/product/intro/intro_mac.png" width="700px">
+        </div>
+    </div><br>
+    <div class="product-panel card">
+        <h1>xPhone 15</h1>
+        <p>มาหรือยังนะ USB-C</p>
+        <table class="product-panel-link">
+            <tr>
+                <td><a href="prod_phone.html">ดูเพิ่มเติม</a></td>
+                <td><a name="buyBtn">ซื้อ</a></td>
+            </tr>
+        </table>
+        <div class="product-panel-img">
+            <img src="image/product/intro/intro_phone.png" width="700px">
+        </div>
+    </div>
+
+    <!-- other product -->
+    <table class="product-panel-small">
+        <tr>
+            <td>
+                <div class="product-panel-small-item card" style="background-image: url(https://www.apple.com/th/home/images/promos/iphone-14-pro/promo_iphone14pro_spring__c7pyovk04j2a_medium_2x.jpg);">
+                    <h1>xPhone 14 Pro</h1>
+                    <p>โปร ยิ่งกว่าเงินในกระเป๋า</p>
+                    <table class="product-panel-link">
+                        <tr>
+                            <td><a href="prod_phone.html">ดูเพิ่มเติม</a></td>
+                            <td><a name="buyBtn">ซื้อ</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="product-panel-small-item card" style="background-image: url(https://www.apple.com/th/home/images/promos/apple-watch-series-8/promo_apple_watch_series_8_spring__d9hfvufh7hyu_medium_2x.jpg);">
+                    <h1>xWatch</h1>
+                    <p>ก้าวกระโดดหาแท่นชาร์จในทุกวัน</p>
+                    <table class="product-panel-link">
+                        <tr>
+                            <td><a href="">ดูเพิ่มเติม</a></td>
+                            <td><a name="buyBtn">ซื้อ</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-panel-small-item card" style="background-image: url(https://www.apple.com/th/home/images/promos/ipad-pro/promo_ipadpro_refresh__evi9utuixwuq_medium_2x.jpg);">
+                    <h1>xPad Pro</h1>
+                    <p>อัดฉีดพลังเงินแรง</p>
+                    <table class="product-panel-link">
+                        <tr>
+                            <td><a href="">ดูเพิ่มเติม</a></td>
+                            <td><a name="buyBtn">ซื้อ</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="product-panel-small-item card" style="background-image: url(https://www.apple.com/v/home/bd/images/promos/airpods-pro/promo_airpods_pro_avail__gaxggskofx6y_medium_2x.jpg);">
+                    <h1>xPods Pro</h1>
+                    <p>ใหม่หมดในทุกท่วงท่า</p>
+                    <table class="product-panel-link">
+                        <tr>
+                            <td><a href="">ดูเพิ่มเติม</a></td>
+                            <td><a name="buyBtn">ซื้อ</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <footer class="footer">
+        Copyright © 1991 Mango Inc. สงวนสิทธิ์ทุกประการ
+        <table>
+            <tr>
+                <td class="footer-link"><a>นโยบายความเป็นส่วนตัว</a></td>
+                <td class="footer-link"><a>ข้อกำหนดการใช้งาน</a></td>
+                <td class="footer-link"><a>การขายและการคืนเงิน</a></td>
+                <td class="footer-link"><a>ข้อมูลทางกฏหมาย</a></td>
+            </tr>
+        </table>
+    </footer>
+    <div id="outofstock-box" class="card" hidden>
+        <h2>ยังไม่มีสินค้าในขณะนี้</h2>
+        <button id="outofstock-btn" class="card">รับซาบ</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
