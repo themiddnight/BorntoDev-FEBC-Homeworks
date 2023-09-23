@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color:darkslategray;
+}
+
 .header {
     color: white;
-    background-color: #222;
+    background-color: rgb(64, 36, 31);
     padding: 70px 20px;
     text-align: center;
+    cursor: default;
 }
 
 .header h1 {
@@ -18,7 +23,7 @@
 }
 
 nav {
-    background-color: #333;
+    background-color: #222;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -59,7 +64,7 @@ nav {
 
 .prod-list {
     text-align: center;
-    background-color: #ddd;
+    background-color: #ccc;
     padding: 15px;
     border-radius: 10px;
     overflow: hidden;
@@ -67,7 +72,7 @@ nav {
 }
 
 .prod-list:hover {
-    background-color: #ccc;
+    background-color: #ddd;
     scale: 1.05;
 }
 
@@ -153,7 +158,7 @@ nav {
 
 footer {
     color: #fff;
-    background-color: #333;
+    background-color: #222;
     padding: 20px;
     text-align: center;
 }
