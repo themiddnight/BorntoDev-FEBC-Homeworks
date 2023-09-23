@@ -64,7 +64,7 @@ nav {
 
 .prod-list {
     text-align: center;
-    background-color: #ccc;
+    background-color: #ccccccbb;
     padding: 15px;
     border-radius: 10px;
     overflow: hidden;
@@ -72,7 +72,7 @@ nav {
 }
 
 .prod-list:hover {
-    background-color: #ddd;
+    background-color: #ccc;
     scale: 1.05;
 }
 
@@ -125,19 +125,18 @@ nav {
 
 .primary {
     font-weight: bold;
-    background-color: orange;
+    color: #fff;
+    background-color: rgb(83, 140, 140);
     transition: 0.2s;
 }
 
 .primary:hover {
-    background-color: brown;
-    color: #fff;
+    background-color: rgb(100, 46, 36);
     cursor: pointer;
 }
 
 .primary:active {
     background-color: #222;
-    color: #fff;
 }
 
 .secondary {
@@ -146,7 +145,7 @@ nav {
 }
 
 .secondary:hover {
-    background-color: #777;
+    background-color: rgb(152, 189, 189);
     color: #fff;
     cursor: pointer;
 }
