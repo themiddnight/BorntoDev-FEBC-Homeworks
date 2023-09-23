@@ -131,7 +131,7 @@ nav {
 }
 
 .primary:hover {
-    background-color: rgb(100, 46, 36);
+    background-color: rgb(40, 64, 64);
     cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ nav {
 }
 
 .secondary:hover {
-    background-color: rgb(152, 189, 189);
+    background-color: rgb(101, 101, 101);
     color: #fff;
     cursor: pointer;
 }
