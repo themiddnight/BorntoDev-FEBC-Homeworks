@@ -20,11 +20,11 @@ body {
 }
 
 .clear {
-    width: 90px;
+    width: 30px;
     height: 30px;
     border: 0;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 100%;
     background-color: rgb(240, 250, 255);
     color: rgb(105, 105, 105);
     transition: 0.3s;
@@ -124,4 +124,33 @@ body {
     display: flex;
     width: 60%;
     height: 30px;
+}
+
+@media screen and (max-width: 512px) {
+    .header h1 {
+        font-size: 26px;
+    }
+    .todo-container {
+        width: 90%;
+        min-width: 300px;
+        margin-block: 100px;
+    }
+
+    .input-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .header h1 {
+        font-size: 22px;
+    }
+    .todo-container {
+        width: 90%;
+        min-width: 250px;
+        margin-block: 80px;
+    }
+    .input-container {
+        width: 90%;
+    }
 }

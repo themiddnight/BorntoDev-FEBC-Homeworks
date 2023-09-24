@@ -1,6 +1,6 @@
 function createClearBtn() {
     let clearBtn = document.createElement("button");
-    let txt = document.createTextNode("Clear");
+    let txt = document.createTextNode("X");
     clearBtn.className = "clear";
     clearBtn.appendChild(txt);
     return clearBtn;
