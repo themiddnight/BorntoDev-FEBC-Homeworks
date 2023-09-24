@@ -48,6 +48,15 @@ nav {
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.2s;
+}
+
+.logo a:hover {
+    text-shadow: 0 0 15px #ffffffaa;
+}
+
+.logo a:active {
+    text-shadow: 0 0 0px #ffffffaa;
 }
 
 .nav-ul {
@@ -95,6 +104,14 @@ nav {
     font-size: small;
 }
 
+.searchbox a:hover {
+    text-decoration: underline;
+}
+
+.searchbox a:active {
+    text-decoration: none;
+}
+
 .nav-btn {
     display: none;
 }
@@ -104,7 +121,7 @@ nav {
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 25px;
     padding: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -213,6 +230,10 @@ footer {
     text-align: center;
 }
 
+footer p {
+    font-size: small;
+}
+
 .shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -240,7 +261,7 @@ footer {
     .prod-container {
         grid-template-columns: auto auto auto;
         padding: 30px;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
     .prod-list:hover {
         scale: 1.0;
@@ -296,9 +317,12 @@ footer {
     .prod-container {
         grid-template-columns: auto auto;
     }
+    .btn {
+        scale: 1.2;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 512px) {
     .header img {
         width: 100px;
     }
@@ -311,6 +335,7 @@ footer {
     .prod-container {
         grid-template-columns: auto;
         padding: 30px;
+        padding-bottom: 200px;
     }
 }
 
@@ -330,5 +355,6 @@ footer {
     .prod-container {
         grid-template-columns: auto;
         padding: 10px;
+        padding-bottom: 200px;
     }
 }
