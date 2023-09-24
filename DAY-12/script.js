@@ -34,10 +34,25 @@ for (prod of products) {
     document.getElementById("prod-container").innerHTML += prodListTxt;
 }
 
+// click to show responsive menu
 let showNavBtn = document.getElementById("shownav-btn");
 showNavBtn.addEventListener("click", () => {
     let navUl = document.getElementById("nav-ul");
     let navSearchbox = document.getElementById("searchbox");
-    navUl.classList.toggle("show");
-    navSearchbox.classList.toggle("show");
+    navUl.classList.toggle("responsive-show");
+    navSearchbox.classList.toggle("responsive-show");
 });
+
+// if window increased to 768px while responsive menu showing, remove responsive-show class
+function responsiveToggle() {
+    let navUl = document.getElementById("nav-ul");
+    let navSearchbox = document.getElementById("searchbox");
+    if (navUl.classList.contains("responsive-show")) {
+        navUl.classList.remove("responsive-show");
+        navSearchbox.classList.remove("responsive-show");
+    }
+}
+
+var x = window.matchMedia("(max-width: 740px)")
+responsiveToggle(x)
+x.addListener(responsiveToggle)

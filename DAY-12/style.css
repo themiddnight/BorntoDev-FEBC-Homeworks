@@ -13,16 +13,14 @@ body {
 .header {
     color: white;
     background-color: rgb(64, 36, 31);
-    padding: 70px 20px;
+    padding: 30px 20px;
     text-align: center;
     overflow: hidden;
     cursor: default;
 }
 
-.header h1 {
-    font-size: 36pt;
-    font-weight: lighter;
-    letter-spacing: 5pt;
+.header img {
+    width: 150px;
 }
 
 nav {
@@ -47,6 +45,7 @@ nav {
 
 .logo a {
     color: #fff;
+    font-size: larger;
     font-weight: bold;
     text-decoration: none;
 }
@@ -54,6 +53,7 @@ nav {
 .nav-ul {
     display: flex;
     justify-content: center;
+    margin-left: -30px;
 }
 
 .nav-ul li {
@@ -217,33 +217,45 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.show {
-    display: block;
-}
-
 @media screen and (max-width: 1280px) {
     .prod-container {
         grid-template-columns: auto auto auto auto;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1020px) {
     .nav-container {
-        grid-template-columns: auto auto auto;
+        display: flex;
+        justify-content: start;
+    }
+    .nav-ul {
+        margin-left: 0px;
     }
     .nav-ul li {
         padding: 15px 15px;
     }
+    .searchbox {
+        margin-left: auto;
+    }
     .prod-container {
         grid-template-columns: auto auto auto;
+        padding: 30px;
+        padding-bottom: 100px;
+    }
+    .prod-list:hover {
+        scale: 1.0;
+        background-color: #ccccccbb;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .header h1 {
-        font-size: 24pt;
-    }
+.responsive-show {
+    display: block;
+}
+
+@media screen and (max-width: 740px) {
     .nav-container {
+        display: grid;
+        justify-content: space-between;
         grid-template-columns: auto auto;
         padding: 15px 0;
     }
@@ -254,6 +266,7 @@ footer {
         grid-row: 2;
         flex-direction: column;
         padding: 15px 10px;
+        margin-left: 0px;
         display: none;
     }
     .searchbox {
@@ -261,10 +274,10 @@ footer {
         display: none;
         padding-left: 30px;
     }
-    .nav-ul.show {
+    .nav-ul.responsive-show {
         display: block;
     }
-    .searchbox.show {
+    .searchbox.responsive-show {
         display: block;
     }
     .nav-btn {
@@ -285,13 +298,9 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .header {
-        padding: 40px 20px;
-    }
-    .prod-container {
-        grid-template-columns: auto;
-        padding: 30px;
+@media screen and (max-width: 500px) {
+    .header img {
+        width: 100px;
     }
     .searchbox input {
         margin: 10px 0;
@@ -299,15 +308,13 @@ footer {
     .searchbox a {
         padding: 10px;
     }
+    .prod-container {
+        grid-template-columns: auto;
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 320px) {
-    .header {
-        padding: 30px 20px;
-    }
-    .header h1 {
-        font-size: 12pt;
-    }
     .searchbox {
         display: flex;
         flex-direction: column;
