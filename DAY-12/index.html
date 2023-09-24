@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <!-- header -->
   <div class="header">
     <h1>MIDDNIGHT's Vintage</h1>
@@ -16,17 +17,30 @@
 
   <!-- navbar -->
   <nav class="shadow">
-    <ul class="nav-ul">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>Products</li></a>
-      <a href="#"><li>Contact</li></a>
-    </ul>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#">MIDDNIGHT's</a>
+      </div>
+      <ul class="nav-ul" id="nav-ul">
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>Products</li></a>
+        <a href="#"><li>Contact</li></a>
+      </ul>
+      <div class="searchbox" id="searchbox">
+        <input type="text" placeholder="Search">
+        <span><a href="#">Search</a></span>
+      </div>
+      <div class="nav-btn">
+        <button id="shownav-btn">⌵</button>
+      </div>
+    </div>
   </nav>
 
-  <!-- main -->
+  <!-- products list -->
   <div class="prod-container" id="prod-container">
 
-    <!-- <div class="prod-list shadow">
+    <!-- ** loop items by javascript **
+    <div class="prod-list shadow">
       <div class="prod-img">
         <img src="" alt="">
       </div>
@@ -38,12 +52,17 @@
         <button class="btn primary">Buy</button>
         <button class="btn secondary">Details</button>
       </div>
-    </div> -->
+    </div> 
+    -->
 
   </div>
+
+  <!-- footer -->
   <footer>
     <p>Something all rights reserved.</p>
   </footer>
+
+  <!-- script -->
   <script src="script.js"></script>
 </body>
 

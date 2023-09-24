@@ -1,4 +1,4 @@
-// list of 12 maps of products with their properties: image path = "", name, price
+// list of product objects with their properties
 const products = [
     { name: "Canon AE-1 Program", price: "90.00" },
     { name: "Canon AF35M Autoboy", price: "120.00" },
@@ -33,3 +33,11 @@ for (prod of products) {
     // get elements by id "prod-container" and append prodListTxt
     document.getElementById("prod-container").innerHTML += prodListTxt;
 }
+
+let showNavBtn = document.getElementById("shownav-btn");
+showNavBtn.addEventListener("click", () => {
+    let navUl = document.getElementById("nav-ul");
+    let navSearchbox = document.getElementById("searchbox");
+    navUl.classList.toggle("show");
+    navSearchbox.classList.toggle("show");
+});
