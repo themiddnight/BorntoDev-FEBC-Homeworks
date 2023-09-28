@@ -76,7 +76,7 @@ li {
 }
 
 /* responsive */
-@media (max-width: 1200px) {
+@media (max-width: 1140px) {
     .header h1 {
         font-size: 48px;
     }
@@ -86,8 +86,12 @@ li {
     .description {
         font-size: 18px;
     }
-    ul {
-        padding: 30px 30px;
+    .link-container {
+        grid-template-columns: auto;
+        width: 70%;
+    }
+    .project-ul {
+        grid-column: 1;
     }
     li {
         font-size: normal;
@@ -109,7 +113,7 @@ li {
     .description {
         font-size: 16px;
     }
-    ul {
-        padding: 50px 30px;
+    .link-container {
+        width: 100%;
     }
 }
