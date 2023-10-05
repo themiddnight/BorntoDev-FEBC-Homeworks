@@ -225,10 +225,7 @@
 		function submitReview() {
 			let username = "John Constantine"
 			let rating = document.querySelector('input[name="rating"]:checked')?.value;
-			let review = document.querySelector('textarea').value;
-			if (rating && review) {
-				document.getElementById('submitReviewBtn').disabled = true;
-			}
+			let review = document.getElementById('reviewInput').value;
 			if (rating && review) {
 				let reviewHTML = `
 					<div class="list-group-item py-3">
@@ -240,6 +237,8 @@
 					</div>
 				`;
 				document.getElementById('reviews-div').innerHTML += reviewHTML;
+				document.getElementById('reviewInput').value = "";
+				document.querySelector('input[name="rating"]:checked').checked = false;
 				console.log(rating, username, review);
 			}
 		}
