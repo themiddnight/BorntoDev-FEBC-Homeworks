@@ -5,10 +5,11 @@
 }
 
 body {
+    background-color: #111;
     background-image: linear-gradient(to bottom, #111, #222);
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     color: #fff;
     background-color: #111;
 }

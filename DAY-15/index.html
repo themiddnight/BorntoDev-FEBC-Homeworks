@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<style>
+		input[type="radio"]:checked {
+			background-color: orange;
+			border-color: orange;
+		}
+	</style>
+	<title>Homework Day-15</title>
+</head>
+
+<body data-bs-theme="dark">
+	<!-- navbar -->
+	<nav class="navbar bg-black navbar-expand-md mb-4 sticky-top shadow">
+		<div class="container">
+			<a class="navbar-brand fw-bold text-warning" href="#">MIDDNIGHT</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Products</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+
+				<form class="d-flex my-2 my-sm-0" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-sm" type="submit">Search</button>
+				</form>
+
+			</div>
+		</div>
+	</nav>
+
+	<!-- container -->
+	<div class="container">
+
+		<h1 class="py-4">Canon EOS-Something</h1>
+		<div class="row">
+
+			<!-- photo and progress-->
+			<div class="col-md-6 mb-5">
+				<!-- photo -->
+				<img class="img-thumbnail mb-4 mx-auto d-block shadow"
+					src="https://i5.walmartimages.com/seo/Canon-EOS-Rebel-T100-Digital-SLR-Camera-with-18-55mm-Lens-Kit-18-Megapixel-Sensor-Wi-Fi-DIGIC4-SanDisk-32GB-Memory-Card-and-Live-View-Shooting_ce0f57f7-ad6f-4e0b-a7ae-f751068597c2_1.b7e1f1bab1fd7f98cb9aef1ae9b783fb.png"
+					alt="">
+				<!-- progress -->
+				<div class="container">
+					<p class="fw-bold">Stock (47/100)</p>
+					<div class="progress" role="progressbar" style="height: 15px">
+						<div class="progress-bar bg-warning" style="width: 47%"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- detail -->
+			<div class="col-md-6 mb-5">
+				<!-- feature card -->
+				<div class="card mb-4 p-3 bg-body-secondary border-0 shadow">
+					<div class="card-body">
+						<h5 class="card-title">Canon EOS-Something</h5>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, praesentium
+							maiores eum explicabo aliquam adipisci eaque optio dolor cumque ab nisi? Assumenda distinctio quia
+							repudiandae reprehenderit perferendis totam amet tenetur!</p>
+						<!-- price -->
+						<p class="card-text fw-bold">Price: $99.97</p>
+						<!-- form -->
+						<label class="form-label">Quantity:</label>
+						<form class="row row-cols-sm-auto g-3">
+							<div class="col-12">
+								<input type="number" value="1" class="form-control bg-dark-subtle">
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- spec -->
+				<div class="card shadow">
+					<div class="card-header fw-bold">
+						Specifications
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table fs-6">
+								<tbody>
+									<tr>
+										<td>Type</td>
+										<td>DSLR</td>
+									</tr>
+									<tr>
+										<td>Resolution</td>
+										<td>18 MP</td>
+									</tr>
+									<tr>
+										<td>Sensor</td>
+										<td>APS-C</td>
+									</tr>
+									<tr>
+										<td>Lens</td>
+										<td>18-55mm</td>
+									</tr>
+									<tr>
+										<td>Flash</td>
+										<td>Yes</td>
+									</tr>
+									<tr>
+										<td>Video Resolution</td>
+										<td>1080p</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- reviews -->
+		<div class="card mb-4 bg-dark-subtle shadow">
+			<div class="card-header bg-dark-subtle fw-bold">Your review</div>
+			<div class="card-body">
+				<div class="pb-3">
+					<div class="d-sm-inline me-3 mb-2 mb-sm-0">Rating:</div>
+					<div class="form-check form-check-inline me-4">
+						<input class="form-check-input form-check-input-checked-bg-color-warning" type="radio" name="rating"
+							id="inlineCheckbox1" value="option1">
+						<label class="form-check-label" for="inlineCheckbox1">1</label>
+					</div>
+					<div class="form-check form-check-inline me-4">
+						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox2" value="option2">
+						<label class="form-check-label" for="inlineCheckbox2">2</label>
+					</div>
+					<div class="form-check form-check-inline me-4">
+						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox3" value="option3">
+						<label class="form-check-label" for="inlineCheckbox3">3</label>
+					</div>
+					<div class="form-check form-check-inline me-4">
+						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox4" value="option4">
+						<label class="form-check-label" for="inlineCheckbox2">4</label>
+					</div>
+					<div class="form-check form-check-inline me-4">
+						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox5" value="option5">
+						<label class="form-check-label" for="inlineCheckbox3">5</label>
+					</div>
+				</div>
+
+				<form>
+					<div class="mb-3">
+						<textarea class="form-control border-0" rows="5"></textarea>
+					</div>
+					<button type="submit" class="btn btn-warning float-end">Submit review</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="list-group mb-5 shadow">
+			<div class="list-group-item bg-body-tertiary fw-bold">Reviews</div>
+			<div class="list-group-item py-3">
+				<h5 class="mb-2">John Nonlen</h5>
+				<div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nihil.</div>
+			</div>
+			<div class="list-group-item py-3">
+				<h5 class="mb-2">Kim Jong-Un</h5>
+				<div class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dolores qui architecto. Consequatur
+					iste modi, corrupti minus rem deleniti debitis saepe ipsum explicabo. Dolorum, laborum repudiandae. Voluptas
+					culpa reiciendis iure?</div>
+			</div>
+			<div class="list-group-item py-3">
+				<h5 class="mb-2">Tony Woodsome</h5>
+				<div class="">Lorem ipsum dolor sit amet consectetur.</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer class="py-3 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+			</ul>
+			<p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+		</footer>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
