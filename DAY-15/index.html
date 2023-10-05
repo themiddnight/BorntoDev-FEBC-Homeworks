@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#000000">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 	<style>
 		input[type="radio"]:checked {
@@ -59,9 +60,9 @@
 					alt="">
 				<!-- progress -->
 				<div class="container">
-					<p class="fw-bold">Stock (47/100)</p>
+					<p class="fw-bold">Stock (4/10)</p>
 					<div class="progress" role="progressbar" style="height: 15px">
-						<div class="progress-bar bg-warning" style="width: 47%"></div>
+						<div class="progress-bar bg-warning" style="width: 40%"></div>
 					</div>
 				</div>
 			</div>
@@ -79,14 +80,14 @@
 						<p class="card-text fw-bold">Price: $99.97</p>
 						<!-- form -->
 						<label class="form-label">Quantity:</label>
-						<form class="row row-cols-sm-auto g-3">
-							<div class="col-12">
-								<input type="number" value="1" class="form-control bg-dark-subtle">
+						<div class="row row-cols-sm-auto g-3">
+							<div>
+								<input type="number" id="quantity" value="1" class="form-control bg-dark-subtle">
 							</div>
-							<div class="col-12">
-								<button type="submit" class="btn btn-warning">Add to Cart</button>
+							<div>
+								<button type="submit" class="btn btn-warning" onclick="buyItem()">Add to Cart</button>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 
@@ -131,58 +132,72 @@
 			</div>
 		</div>
 
-		<!-- reviews -->
+		<!-- submit review -->
 		<div class="card mb-4 bg-dark-subtle shadow">
 			<div class="card-header bg-dark-subtle fw-bold">Your review</div>
 			<div class="card-body">
-				<div class="pb-3">
-					<div class="d-sm-inline me-3 mb-2 mb-sm-0">Rating:</div>
-					<div class="form-check form-check-inline me-4">
-						<input class="form-check-input form-check-input-checked-bg-color-warning" type="radio" name="rating"
-							id="inlineCheckbox1" value="option1">
-						<label class="form-check-label" for="inlineCheckbox1">1</label>
-					</div>
-					<div class="form-check form-check-inline me-4">
-						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox2" value="option2">
-						<label class="form-check-label" for="inlineCheckbox2">2</label>
-					</div>
-					<div class="form-check form-check-inline me-4">
-						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox3" value="option3">
-						<label class="form-check-label" for="inlineCheckbox3">3</label>
-					</div>
-					<div class="form-check form-check-inline me-4">
-						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox4" value="option4">
-						<label class="form-check-label" for="inlineCheckbox2">4</label>
-					</div>
-					<div class="form-check form-check-inline me-4">
-						<input class="form-check-input" type="radio" name="rating" id="inlineCheckbox5" value="option5">
-						<label class="form-check-label" for="inlineCheckbox3">5</label>
+				<!-- form -->
+				<div>
+					<div>
+						<label for="userInput" class="mb-2">Rating</label>
+						<div class="mb-3">
+							<div class="form-check form-check-inline me-4">
+								<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox1" value="1">
+								<label class="form-check-label" for="ratingCheckbox1">1</label>
+							</div>
+							<div class="form-check form-check-inline me-4">
+								<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox2" value="2">
+								<label class="form-check-label" for="ratingCheckbox2">2</label>
+							</div>
+							<div class="form-check form-check-inline me-4">
+								<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox3" value="3">
+								<label class="form-check-label" for="ratingCheckbox3">3</label>
+							</div>
+							<div class="form-check form-check-inline me-4">
+								<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox4" value="4">
+								<label class="form-check-label" for="ratingCheckbox4">4</label>
+							</div>
+							<div class="form-check form-check-inline me-4">
+								<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox5" value="5">
+								<label class="form-check-label" for="ratingCheckbox5">5</label>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<form>
-					<div class="mb-3">
-						<textarea class="form-control border-0" rows="5"></textarea>
-					</div>
-					<button type="submit" class="btn btn-warning float-end">Submit review</button>
-				</form>
+				<div class="mb-3">
+					<label for="reviewInput" class="mb-2">Review</label>
+					<textarea id="reviewInput" class="form-control border-0" rows="5"></textarea>
+				</div>
+
+				<button class="btn btn-warning float-end" id="submitReviewBtn" onclick="submitReview()">Submit Review</button>
 			</div>
 		</div>
 
-		<div class="list-group mb-5 shadow">
+		<!-- reviews -->
+		<div class="list-group mb-5 shadow" id="reviews-div">
 			<div class="list-group-item bg-body-tertiary fw-bold">Reviews</div>
 			<div class="list-group-item py-3">
-				<h5 class="mb-2">John Nonlen</h5>
+				<div class="d-flex gap-3">
+					<h5 class="fw-bold">John Nonlen</h5>
+					<div class="fw-lighter text-warning">5 Stars</div>
+				</div>
 				<div class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nihil.</div>
 			</div>
 			<div class="list-group-item py-3">
-				<h5 class="mb-2">Kim Jong-Un</h5>
+				<div class="d-flex gap-3">
+					<h5 class="fw-bold">Kin Jung-Un</h5>
+					<div class="fw-lighter text-warning">5 Stars</div>
+				</div>
 				<div class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dolores qui architecto. Consequatur
 					iste modi, corrupti minus rem deleniti debitis saepe ipsum explicabo. Dolorum, laborum repudiandae. Voluptas
 					culpa reiciendis iure?</div>
 			</div>
 			<div class="list-group-item py-3">
-				<h5 class="mb-2">Tony Woodsome</h5>
+				<div class="d-flex gap-3">
+					<h5 class="fw-bold">Tony Woodsome</h5>
+					<div class="fw-lighter text-warning">5 Stars</div>
+				</div>
 				<div class="">Lorem ipsum dolor sit amet consectetur.</div>
 			</div>
 		</div>
@@ -202,6 +217,33 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function buyItem() {
+			let quantity = document.getElementById('quantity').value;
+			console.log(quantity);
+		}
+		function submitReview() {
+			let username = "John Constantine"
+			let rating = document.querySelector('input[name="rating"]:checked')?.value;
+			let review = document.querySelector('textarea').value;
+			if (rating && review) {
+				document.getElementById('submitReviewBtn').disabled = true;
+			}
+			if (rating && review) {
+				let reviewHTML = `
+					<div class="list-group-item py-3">
+						<div class="d-flex gap-3">
+							<h5 class="fw-bold">${username}</h5>
+							<div class="fw-lighter text-warning">${rating} Stars</div>
+						</div>
+						<div class="">${review}</div>
+					</div>
+				`;
+				document.getElementById('reviews-div').innerHTML += reviewHTML;
+				console.log(rating, username, review);
+			}
+		}
+	</script>
 </body>
 
 </html>
