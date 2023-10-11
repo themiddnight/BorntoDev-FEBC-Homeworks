@@ -7,3 +7,10 @@
 .carousel-img-div {
     height: 512px;
 }
+
+/* respinsive for sm */
+@media (max-width: 576px) {
+    .carousel-img-div {
+        height: 400px;
+    }
+}

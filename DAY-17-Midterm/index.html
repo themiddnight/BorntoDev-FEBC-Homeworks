@@ -11,7 +11,7 @@
 </head>
 
 <body data-bs-theme="dark">
-  <!-- navbar from partials.js -->
+  <!-- navbar from partial.js -->
 
   <!-- banner -->
   <div class="text-body-emphasis banner d-flex align-items-center shadow" style="background-image: url(https://images.pexels.com/photos/4033340/pexels-photo-4033340.jpeg?auto=compress&cs=tinysrgb&w=1600);">
@@ -19,7 +19,9 @@
       <div class="col-lg-8 px-0 text-white">
         <h1 class="display-4 fw-bold">New Year Special: Get 20% Off on All Courses!</h1>
         <p class="lead my-3">Start your musical journey with us and save big with our limited-time offer. Learn to play your favorite instruments or improve your singing skills.</p>
-        <p><a class="btn btn-lg btn-warning mt-4" href="#">Apply Now!</a></p>
+        <p class="d-flex justify-content-center justify-content-sm-start">
+          <a class="btn btn-lg btn-warning mt-4" href="#">Apply Now!</a>
+        </p>
       </div>
     </div>
   </div>
@@ -38,8 +40,8 @@
     </div>
   </section>
   
-  <!-- courses -->
-  <div id="myCarousel" class="carousel slide mb-5 shadow d-none d-md-block" data-bs-ride="carousel">
+  <!-- courses carousel -->
+  <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="bg-light active"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="bg-light" aria-current="true"></button>
@@ -49,19 +51,19 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="carousel-img-div">
-          <img class="w-100 position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/4090165/pexels-photo-4090165.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+          <img class="w-100 h-100 object-fit-cover position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/4090165/pexels-photo-4090165.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
         </div>
         <div class="container">
           <div class="carousel-caption text-white text-start">
             <h1>Guitar Basics</h1>
-            <p class="opacity-75">Whether you're a complete beginner or want to brush up on your skills, our Guitar Basics course will teach you everything you need to know. Learn chords, strumming, and more!</p>
+            <p>Whether you're a complete beginner or want to brush up on your skills, our Guitar Basics course will teach you everything you need to know. Learn chords, strumming, and more!</p>
             <p><a class="btn btn-lg btn-outline-light" href="#">Enroll</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="carousel-img-div">
-          <img class="w-100 position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/5650695/pexels-photo-5650695.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+          <img class="w-100 h-100 object-fit-cover position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/5650695/pexels-photo-5650695.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
         </div>
         <div class="container">
           <div class="carousel-caption text-white">
@@ -73,7 +75,7 @@
       </div>
       <div class="carousel-item">
         <div class="carousel-img-div">
-          <img class="w-100 position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/4088786/pexels-photo-4088786.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+          <img class="w-100 h-100 object-fit-cover position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/4088786/pexels-photo-4088786.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
         </div>
         <div class="container">
           <div class="carousel-caption text-white text-end">
@@ -85,7 +87,7 @@
       </div>
       <div class="carousel-item">
         <div class="carousel-img-div">
-          <img class="w-100 position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/6671698/pexels-photo-6671698.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+          <img class="w-100 h-100 object-fit-cover position-absolute top-50 start-50 translate-middle" src="https://images.pexels.com/photos/6671698/pexels-photo-6671698.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
         </div>
         <div class="container">
           <div class="carousel-caption text-white">
@@ -107,7 +109,7 @@
   </div>
 
   <!-- features -->
-  <div class="container px-4 py-5" id="featured-3">
+  <div class="container px-4 py-5 text-center text-sm-start" id="featured-3">
     <h2 class="pb-2 border-bottom">Why Choose Us?</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="feature col">
@@ -174,8 +176,8 @@
     </div>
   </div>
 
-  <!-- footer from partials.js -->
+  <!-- footer from partial.js -->
 
-  <script src="partials.js"></script>
+  <script src="partial.js"></script>
 </body>
 </html>
