@@ -1,0 +1,9 @@
+.banner {
+    height: 512px;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-img-div {
+    height: 512px;
+}
