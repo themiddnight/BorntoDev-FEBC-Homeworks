@@ -1,16 +1,72 @@
-.banner {
-    height: 512px;
-    background-position: center;
-    background-size: cover;
+.custom-nav {
+    background-color: #00000088;
+}
+
+.custom-search {
+    background-color: #ffffff11;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.custom-dropdown {
+    background-color: #000000;
 }
 
 .carousel-img-div {
     height: 512px;
 }
 
+.index__banner-img-div {
+    height: 400px;
+}
+
+.index-essay__img {
+    border-radius: 20px;
+}
+
+.courses__banner {
+    background-position: center; 
+    background-size: cover; 
+}
+
+.courses__banner-title {
+    backdrop-filter: brightness(0.3); 
+    -webkit-backdrop-filter: brightness(0.3);
+    border-start-start-radius: 20px;
+    border-end-start-radius: 20px;
+}
+
+.courses__card-img-div {
+    height: 256px;
+}
+
 /* respinsive for sm */
 @media (max-width: 576px) {
     .carousel-img-div {
-        height: 400px;
+        height: 480px;
+    }
+    .carousel-img-div img {
+        filter: brightness(0.5);
+    }
+    .custom-dropdown {
+        background-color: #00000066;
+    }
+    .index__banner-img-div {
+        height: 460px;
+        filter: brightness(0.5);
+    }
+    .index-essay__img {
+        border-radius: 0px;
+    }
+}
+
+/* respinsive for md */
+@media (max-width: 768px) {
+    .courses__banner-title {
+        border-start-start-radius: 0px;
+        border-end-start-radius: 0px;
     }
 }
