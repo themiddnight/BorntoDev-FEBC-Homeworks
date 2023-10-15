@@ -5,7 +5,7 @@ const quizSet = {
         [
             {
                 question: "What are the main parts of a guitar that you learned in this lesson?",
-                options: ["Neck, strings, bridge", "Body, keyboard, mouthpiece", "Body, neck, headstock", "Strings, keys, pedals"],
+                options: ["Neck, strings, tailpiece", "Body, keyboard, mouthpiece", "Body, neck, headstock", "Strings, keys, pedals"],
                 correct: "2",
                 selected: ""
             },
@@ -18,7 +18,7 @@ const quizSet = {
             {
                 question: "What is the name of the part of the guitar that you strum?",
                 options: ["The strings", "The bridge", "The body", "The sound hole"],
-                correct: "0",
+                correct: "2",
                 selected: ""
             },
             {
