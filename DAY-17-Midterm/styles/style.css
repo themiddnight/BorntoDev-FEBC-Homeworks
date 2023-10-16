@@ -20,12 +20,31 @@
     background-color: #000000;
 }
 
+.custom-container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+    mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+}
+
 .carousel-img-div {
     height: 512px;
 }
 
 .index-banner-img__div {
-    height: 400px;
+    height: 500px;
 }
 
 .custom-border-radius {
@@ -43,6 +62,7 @@
     -webkit-backdrop-filter: brightness(0.3);
     border-start-start-radius: 20px;
     border-end-start-radius: 20px;
+    padding-right: 300px !important;
 }
 
 .courses-card-img__div {
@@ -62,6 +82,20 @@
 .nav-link.active {
     background-color: #3e4144 !important;
     border-color: #3e4144 !important;
+}
+
+/* respinsive for full-hd and below */
+@media (max-width: 1920px) {
+    .custom-container-fluid {
+        mask-image: linear-gradient(to right, black 0%, black 100%);
+        -webkit-mask-image: linear-gradient(to right, black 0%, black 100%);
+    }
+    .index-banner-img__div {
+        height: 400px;
+    }
+    .courses-banner__div-title {
+        padding-right: 30px !important;
+    }
 }
 
 /* respinsive for lg and below */
@@ -100,6 +134,6 @@
         margin-top: -60px;
     }
     .custom-border-radius {
-        border-radius: 0px;
+        border-radius: 0px !important;
     }
 }
