@@ -35,7 +35,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     // Video is ready to play - do any additional setup here
-    // event.target.playVideo();
+    event.target.playVideo();
 }
 
 function onPlayerStateChange(event) {
