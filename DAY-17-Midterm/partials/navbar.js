@@ -41,7 +41,7 @@ const navbarHtml = `
         <a class="nav-link" href="#">Community</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Account</a>
       </li>
     </ul>
     <form class="d-flex mb-2 mb-sm-0" role="search">
