@@ -63,9 +63,6 @@
 
 /* respinsive for sm and below */
 @media (max-width: 576px) {
-    .custom-top__div {
-        padding-top: 0px !important;
-    }
     .carousel-img-div {
         height: 400px;
     }
@@ -78,6 +75,7 @@
     .index-banner-img__div {
         height: 500px;
         filter: brightness(0.5);
+        margin-top: -60px;
     }
     .index-essay__img {
         border-radius: 0px;
