@@ -18,25 +18,34 @@
 <body data-bs-theme="dark">
   <!-- navbar from navbar.js -->
 
-  <div class="container-fluid custom-top__div">
-    <div class="row row-cols-1 row-cols-lg-2">
+  <div class="container-fluid custom-top__div g-0">
+    <div class="d-flex flex-column flex-lg-row">
 
       <!-- left -->
-      <div class="col-lg-8 col-xxl-9 g-0 g-lg-3 g-xxl-5">
-        <div class="container-lg g-0 g-lg-3 g-xxl-5">
+      <div class="flex-fill m-0 m-sm-2 m-lg-3 m-xxl-5">
+        <div class="container-lg g-0 g-sm-2 g-lg-3">
 
-          <!-- video -->
-          <div class="ratio ratio-16x9 mb-lg-4 shadow">
-            <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI?si=R962ajerIaY3Imly" title="Guitar Basics"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen autoplay></iframe>
-          </div>
+          <!-- tab -->
+          <ul class="nav nav-tabs border-0">
+            <li class="nav-item">
+              <button class="nav-link text-light px-4 border-0 bg-body-tertiary active" id="video-tab" data-bs-toggle="tab" data-bs-target="#video-view" role="tab">Video</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link text-light px-4 border-0 bg-body-tertiary" id="slide-tab" data-bs-toggle="tab" data-bs-target="#slide-view" role="tab">Slide</button>
+            </li>
+          </ul>
+          <!-- tab content -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" role="tabpanel" id="video-view" tabindex="0">
+              <div class="ratio ratio-16x9 mb-lg-4 border border-0 shadow">
+                <div id="player"></div>
+              </div>
+            </div>
 
-          <!-- slide -->
-          <div class="container-lg g-0 g-lg-3 g-xxl-5 my-5 w-75">
-            <div class="ratio ratio-4x3 shadow">
-              <embed src="./src/Guitar Basics.pdf" width="800" height="600"></embed>
+            <div class="tab-pane fade" role="tabpanel" id="slide-view" tabindex="0">
+              <div class="ratio ratio-16x9 mb-lg-4 border border-0 shadow">
+                <embed src="./src/slides/Guitar Basics.pdf"></embed>
+              </div>
             </div>
           </div>
 
@@ -48,8 +57,8 @@
             <div class="card-body">
               <p>Now that you've learned the basics of guitar playing, it's time to learn how to play melodies. In this lesson, we'll cover the basics of playing melodies on the guitar. Playing melodies on the guitar is a great way to express yourself and have fun. It's also a great way to learn how to play songs that you love.</p>
               <div class="d-flex gap-3">
-                <a class="text-warning" href="quiz.html">Take the Quiz</a>
-                <a class="text-primary-emphasis" href="lesson.html">Next Lesson</a>
+                <a class="btn btn-outline-warning rounded-pill px-4 disabled" id="takeQuiz-btn" href="quiz.html">Take the Quiz</a>
+                <a class="btn btn-outline-light rounded-pill px-4 disabled" id="nextLesson-btn" href="lesson.html">Next Lesson</a>
               </div>
             </div>
           </div>
@@ -58,106 +67,119 @@
       </div>
 
       <!-- sidebar -->
-      <div class="col-lg-4 col-xxl-3 d-flex flex-column bg-secondary-subtle" style="min-height: 100vh;">
+      <div class="flex bg-secondary-subtle shadow lesson-sidebar__div">
 
         <a href="course.html"
           class="d-flex align-items-center p-3 link-body-emphasis text-decoration-none border-bottom">
-          <span class="fs-5 fw-semibold">Guitar Basics</span>
+          <span class="fs-5 fw-semibold icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            Guitar Basics
+          </span>
         </a>
 
         <div class="list-group list-group-flush">
 
-          <div class="list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <a href="" class="text-decoration-none text-white mb-2">
-                <strong>Introduction to the Guitar</strong>
-              </a>
-              <small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-              </small>
+          <div class="d-flex list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
+            <div class="mx-2" id="check-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+              </svg>
             </div>
-            <div class="col-10 mb-3 small">
-              Get acquainted with the parts of the guitar and the basics of tuning.
+            <div>
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <a href="" class="text-decoration-none text-white mb-2">
+                  <strong>Introduction to the Guitar</strong>
+                </a>
+              </div>
+              <div class="col-10 mb-3 small">
+                Get acquainted with the parts of the guitar and the basics of tuning.
+              </div>
+              <a class="btn btn-outline-light btn-sm rounded-pill px-4" id="lesson-1" href="quiz.html">Quiz</a>
             </div>
-            <a class="btn btn-outline-light btn-sm rounded-pill px-4" href="quiz.html">Quiz</a>
           </div>
 
-          <div class="list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <a href="" class="text-decoration-none text-white mb-2">
-                <strong>Basic Chords and Strumming</strong>
-              </a>
-              <small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-              </small>
+          <div class="d-flex list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
+            <div class="mx-2" id="check-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+              </svg>
             </div>
-            <div class="col-10 mb-3 small">
-              Learn the basic open chords and a simple strumming pattern.
+            <div>
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <a href="" class="text-decoration-none text-white mb-2">
+                  <strong>Basic Chords and Strumming</strong>
+                </a>
+              </div>
+              <div class="col-10 mb-3 small">
+                Learn the basic open chords and a simple strumming pattern.
+              </div>
+              <a class="btn btn-outline-light btn-sm rounded-pill px-4" id="lesson-2" href="quiz.html">Quiz</a>
             </div>
-            <a class="btn btn-outline-light btn-sm rounded-pill px-4" href="quiz.html">Quiz</a>
           </div>
 
-          <div class="list-group-item list-group-item-action py-4 lh-sm active">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <a href="" class="text-decoration-none text-white mb-2">
-                <strong>Playing Melodies</strong>
-              </a>
-              <small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle"
-                  viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                </svg>
-              </small>
+          <div class="d-flex list-group-item list-group-item-action py-4 lh-sm active">
+            <div class="mx-2" id="check-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle"
+                viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              </svg>
             </div>
-            <div class="col-10 mb-3 small">
-              Now that you've learned the basics of guitar playing, it's time to learn how to play melodies.
+            <div>
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <a href="" class="text-decoration-none text-white mb-2">
+                  <strong>Playing Melodies</strong>
+                </a>
+              </div>
+              <div class="col-10 mb-3 small">
+                Now that you've learned the basics of guitar playing, it's time to learn how to play melodies.
+              </div>
+              <a class="btn btn-outline-light btn-sm rounded-pill px-4 disabled" id="lesson-3" href="quiz.html">Quiz</a>
             </div>
-            <a class="btn btn-outline-light btn-sm rounded-pill px-4" href="quiz.html">Quiz</a>
           </div>
 
-          <div class="list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <a href="" class="text-decoration-none text-white mb-2">
-                <strong>Fingerpicking Techniques</strong>
-              </a>
-              <small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle"
-                  viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                </svg>
-              </small>
+          <div class="d-flex list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
+            <div class="mx-2" id="check-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle"
+                viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              </svg>
             </div>
-            <div class="col-10 mb-3 small">
-              Fingerpicking is a technique that allows you to play multiple notes at the same time.
+            <div>
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <a href="" class="text-decoration-none text-white mb-2">
+                  <strong>Fingerpicking Techniques</strong>
+                </a>
+              </div>
+              <div class="col-10 mb-3 small">
+                Fingerpicking is a technique that allows you to play multiple notes at the same time.
+              </div>
+              <a class="btn btn-outline-light btn-sm rounded-pill px-4 disabled" id="lesson-4" href="quiz.html">Quiz</a>
             </div>
-            <a class="btn btn-outline-light btn-sm rounded-pill px-4" href="quiz.html">Quiz</a>
           </div>
 
-          <div class="list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <a href="" class="text-decoration-none text-white mb-2">
-                <strong>Song Tutorial: 'Wonderwall'</strong>
-              </a>
-              <small>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle"
-                  viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                </svg>
-              </small>
+          <div class="d-flex list-group-item list-group-item-action py-4 lh-sm bg-secondary-subtle">
+            <div class="mx-2" id="check-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle"
+                viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              </svg>
             </div>
-            <div class="col-10 mb-3 small">
-              Learn how to play the song 'Wonderwall' by Oasis. This lesson will teach you how to play the chords and
-              strumming pattern for this song.
+            <div>
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <a href="" class="text-decoration-none text-white mb-2">
+                  <strong>Song Tutorial: 'Wonderwall'</strong>
+                </a>
+              </div>
+              <div class="col-10 mb-3 small">
+                Learn how to play the song 'Wonderwall' by Oasis. This lesson will teach you how to play the chords and
+                strumming pattern for this song.
+              </div>
+              <a class="btn btn-outline-light btn-sm rounded-pill px-4 disabled" id="lesson-5" href="quiz.html">Quiz</a>
             </div>
-            <a class="btn btn-outline-light btn-sm rounded-pill px-4" href="quiz.html">Quiz</a>
           </div>
 
         </div>
@@ -169,6 +191,8 @@
   <!-- footer from footer.js -->
 
   <script src="./partials/navbar.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./scripts/lesson.js"></script>
 </body>
 
 </html>
