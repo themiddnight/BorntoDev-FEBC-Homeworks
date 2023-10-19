@@ -35,13 +35,13 @@ const navbarHtml = `
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Blogs</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#">Community</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Account</a>
+        <a class="nav-link" href="#">Blogs</a>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Account</button>
       </li>
     </ul>
     <form class="d-flex mb-2 mb-sm-0" role="search">
@@ -57,4 +57,69 @@ const navbarHtml = `
 </nav>
 `;
 
+const loginModalHtml = `
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark bg-opacity-50 border-0 rounded-4 p-3 shadow backdrop-blur">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="loginInputEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control rounded-pill border-0 custom-search" id="loginInputEmail" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginInputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control rounded-pill border-0 custom-search" placeholder="Password" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remembermeCheck">
+            <label class="form-check-label" for="remembermeCheck">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-warning rounded-pill px-4">Login</button>
+          <button class="btn btn-border-none rounded-pill" data-bs-target="#signupModal" data-bs-toggle="modal">Sign-Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark bg-opacity-50 border-0 rounded-4 p-3 shadow backdrop-blur">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signupModalLabel">Sign Up</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="mb-3">
+            <label for="signupInputName" class="form-label">Username</label>
+            <input type="text" class="form-control rounded-pill border-0 custom-search" id="signupInputName" placeholder="Username" required>
+        </div>
+          <div class="mb-3">
+            <label for="signupInputEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control rounded-pill border-0 custom-search" id="signupInputEmail" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control rounded-pill border-0 custom-search" placeholder="Password" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="signupCheck" required>
+            <label class="form-check-label" for="signupCheck">I accept something policy</label>
+          </div>
+          <button type="submit" class="btn btn-warning rounded-pill px-4">Sign Up</button>
+          <button class="btn btn-border-none rounded-pill" data-bs-target="#loginModal" data-bs-toggle="modal">Back</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>`
+;
+
 document.body.insertAdjacentHTML("afterbegin", navbarHtml);
+document.body.insertAdjacentHTML("afterbegin", loginModalHtml);
