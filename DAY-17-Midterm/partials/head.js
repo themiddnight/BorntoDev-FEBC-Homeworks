@@ -8,7 +8,7 @@ const headHtml = `
 
 const headElement = document.head;
 
-headElement.insertAdjacentHTML("beforeend", headHtml);
 let tag = document.createElement('script');
 tag.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
 headElement.appendChild(tag);
+headElement.insertAdjacentHTML("beforeend", headHtml);

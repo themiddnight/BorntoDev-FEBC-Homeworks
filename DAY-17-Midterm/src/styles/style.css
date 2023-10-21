@@ -31,7 +31,7 @@ body {
 .first-order::after {
     position: absolute;
     top: 20px;
-    left: 0px;
+    left: 5px;
     /* font-weight: bold; */
     color: white;
     content: "Popular";
@@ -99,7 +99,6 @@ body {
     /* -webkit-backdrop-filter: brightness(0.5) blur(20px); */
     /* border-start-start-radius: 20px; */
     /* border-end-start-radius: 20px; */
-    background-color: #00000088;
     border-radius: 20px;
     padding-right: 300px !important;
 }
