@@ -1,5 +1,5 @@
 const navbarHtml = `
-<nav class="navbar navbar-expand-lg sticky-top shadow custom-nav backdrop-blur">
+<nav class="navbar navbar-expand-lg sticky-top shadow bg-black bg-opacity-50 custom-nav backdrop-blur">
 <div class="container">
     <a class="navbar-brand" href="index.html">
         <span class="fw-bold text-warning me-1">
@@ -22,7 +22,7 @@ const navbarHtml = `
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Courses
         </a>
-        <ul class="dropdown-menu custom-dropdown border-0">
+        <ul class="dropdown-menu bg-black border-0">
           <li><a class="dropdown-item" href="courses.html">All courses</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="course.html">Guitar basics</a></li>
@@ -45,7 +45,7 @@ const navbarHtml = `
       </li>
     </ul>
     <form class="d-flex mb-2 mb-sm-0" role="search">
-      <input class="form-control rounded-pill me-2 px-4 border-0 custom-search" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control rounded-pill me-2 px-4 border-0 bg-dark bg-opacity-50" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-none" type="submit">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>

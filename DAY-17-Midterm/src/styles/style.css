@@ -1,5 +1,5 @@
 body {
-    background: #111;
+    background: #151515;
     /* background-image: 
         linear-gradient(to bottom, transparent 30%, #111 100%),
         radial-gradient(at 16.0% 99.0%, hsl(29, 91%, 48%) 0px, transparent 50%), 
@@ -7,7 +7,7 @@ body {
         radial-gradient(at 51.0% 59.0%, hsl(45, 91%, 55%) 0px, transparent 50%), 
         radial-gradient(at 84.0% 78.0%, hsl(146, 40%, 40%) 0px, transparent 50%), 
         radial-gradient(at 7.0% 13.0%, hsl(301, 60%, 61%) 0px, transparent 50%); */
-    background-size: 100% 65vh;
+    background-size: 100% 600px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -17,11 +17,11 @@ body {
 }
 
 .hover {
-    transform: scale(1);
+    background-color: #ffffff00;
     transition: 0.3s;
 }
 .hover:hover {
-    transform: scale(1.02);
+    background-color: #33333388 !important;
 }
 
 .first-order {
@@ -49,21 +49,12 @@ body {
 }
 
 .custom-nav {
-    background-color: #00000088;
     margin-bottom: -60px;
-}
-
-.custom-search {
-    background-color: #ffffff11;
 }
 
 .backdrop-blur {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-}
-
-.custom-dropdown {
-    background-color: #000000;
 }
 
 .custom-container-fluid {
@@ -90,7 +81,7 @@ body {
 }
 
 .index-banner-img__div {
-    height: 400px !important;
+    height: 460px !important;
 }
 
 .custom-border-radius {
