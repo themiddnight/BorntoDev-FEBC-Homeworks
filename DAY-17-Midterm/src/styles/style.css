@@ -141,7 +141,7 @@ body {
         height: 400px;
     }
     .courses-banner__div-title {
-        padding-right: 1rem !important;
+        padding-right: 3rem !important;
     }
 }
 
@@ -189,5 +189,8 @@ body {
     }
     .index-banner-img__div {
         height: 440px !important;
+    }
+    .courses-banner__div-title {
+        padding-right: 1.5rem !important;
     }
 }
