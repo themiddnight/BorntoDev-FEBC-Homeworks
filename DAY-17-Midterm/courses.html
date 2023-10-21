@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <meta property="og:title" content="MIDDNIGHT's Music Academy courses">
   <meta property="og:description" content="Pathompong's BorntoDev FEBC midterm project.">
   <meta property="og:image" content="https://images.pexels.com/photos/5727886/pexels-photo-5727886.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -14,10 +12,10 @@
   <!-- navbar from navbar.js -->
 
   <!-- banner -->
-  <div class="py-md-5 row g-0 container-fluid shadow courses-banner__div custom-container-fluid custom-top__div"
-    style="background-image: url(https://images.pexels.com/photos/6647418/pexels-photo-6647418.jpeg?auto=compress&cs=tinysrgb&w=1600);">
-    <div class="col-0 col-md-3 col-lg-4 col-xl-5"></div>
-    <div class="col-12 col-md-9 col-lg-8 col-xl-7 py-md-4">
+  <div class="py-md-5 row g-0 shadow courses-banner__div custom-container-fluid custom-top__div">
+    <!-- style="background-image: url(https://images.pexels.com/photos/6647418/pexels-photo-6647418.jpeg?auto=compress&cs=tinysrgb&w=1600);" -->
+    <!-- <div class="col-0 col-md-3 col-lg-4 col-xl-5"></div> -->
+    <div class="col-12 col-md-10 col-lg-9 col-xl-8 mx-auto py-md-4">
       <div class="p-5 shadow courses-banner__div-title">
         <h1 class="fw-light text-center text-sm-start">Welcome to Our Courses</h1>
         <p class="lead text-body-secondary d-none d-sm-block">We believe that everyone has the potential to make music a part of their life. Our mission is to provide you with the tools, knowledge, and community you need to explore the world of music, expand your skills, and achieve your musical aspirations.</p>
@@ -26,17 +24,17 @@
   </div>
 
   <!-- courses list -->
-  <div class="container mt-3 mt-sm-5">
+  <div class="container mt-3 mt-sm-4 mt-md-0">
     
     <!-- filter -->
-    <div class="d-block d-sm-flex justify-content-start justify-content-sm-end mb-3 gap-4">
+    <div class="d-block d-sm-flex flex-wrap justify-content-start justify-content-md-end mb-4 align-items-center gap-4">
 
-      <div class="d-block d-sm-flex col-auto gap-2">
+      <div class="d-block d-sm-flex align-items-center col-auto gap-2">
         <div class="col-auto">
           <label for="order-by" class="col-form-label">Order by:</label>
         </div>
         <div class="col-auto">
-          <select class="form-select bg-secondary-subtle rounded-pill border-0" name="order-by" id="order-by">
+          <select class="form-select bg-black bg-opacity-50 rounded-pill border-0" name="order-by" id="order-by">
             <option value="course-title">Title: A-Z</option>
             <option value="course-title">Title: Z-A</option>
             <option value="catagory">Catagory: A-Z</option>
@@ -45,12 +43,12 @@
         </div>
       </div>
 
-      <div class="d-block d-sm-flex col-auto gap-2">
+      <div class="d-block d-sm-flex align-items-center col-auto gap-2">
         <div class="col-auto">
           <label for="filter" class="col-form-label">Filter:</label>
         </div>
         <div class="col-auto">
-          <select class="form-select bg-secondary-subtle rounded-pill border-0" name="filter" id="filter">
+          <select class="form-select bg-black bg-opacity-50 rounded-pill border-0" name="filter" id="filter">
             <option value="course-title">All</option>
             <option value="course-title">Instruments</option>
             <option value="course-title">Songwriting</option>
@@ -59,13 +57,27 @@
         </div>
       </div>
 
+      <div class="d-block d-lg-flex align-items-center col-12 col-lg-auto gap-2">
+        <div class="col-auto d-block d-sm-none">
+          <label for="courseSearch" class="col-form-label">Search:</label>
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control rounded-pill px-3 border-0  bg-black bg-opacity-50" id="courseSearch" type="search" placeholder="Search courses" aria-label="Search">
+          <button class="btn btn-none ms-1" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          </button>
+        </form>
+      </div>
+
     </div>
 
-    <!-- course cards -->
+    <!-- course cards row row-cols-1 row-cols-lg-2 row-cols-xxl-3 -->
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 g-sm-5 mb-5">
 
       <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/4090165/pexels-photo-4090165.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -85,8 +97,8 @@
         </div>
       </div>
 
-      <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+      <div class="col d-flex align-items-stretch first-order">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/5650695/pexels-photo-5650695.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -107,7 +119,7 @@
       </div>
 
       <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/4088786/pexels-photo-4088786.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -127,8 +139,8 @@
         </div>
       </div>
 
-      <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+      <div class="col d-flex align-items-stretch first-order">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/6671698/pexels-photo-6671698.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -149,7 +161,7 @@
       </div>
 
       <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/4143420/pexels-photo-4143420.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -170,7 +182,7 @@
       </div>
 
       <div class="col d-flex align-items-stretch">
-        <div class="card border-0 bg-body-tertiary rounded-4 overflow-hidden shadow">
+        <div class="card border-0 bg-black rounded-4 overflow-hidden shadow bg-opacity-50 hover">
           <div class="courses-card-img__div overflow-hidden">
             <img class="card-img-top h-100 object-fit-cover" src="https://images.pexels.com/photos/4709821/pexels-photo-4709821.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
           </div>
@@ -198,5 +210,6 @@
   <script src="./partials/head.js"></script>
   <script src="./partials/navbar.js"></script>
   <script src="./partials/footer.js"></script>
+  <script src="./src/scripts/random-bg.js"></script>
 </body>
 </html>

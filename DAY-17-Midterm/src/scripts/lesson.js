@@ -35,7 +35,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     // Video is ready to play - do any additional setup here
-    event.target.playVideo();
+    // event.target.playVideo();
 }
 
 function onPlayerStateChange(event) {
@@ -47,9 +47,9 @@ function onPlayerStateChange(event) {
 
             if (duration - currentTime <= 10) {
                 checkSymbol.innerHTML = checked_symbol;
-                quizBtn.classList.remove("disabled");
-                takeQuizBtn.classList.remove("disabled");
-                nextLessonBtn.classList.remove("disabled");
+                // quizBtn.classList.remove("disabled");
+                // takeQuizBtn.classList.remove("disabled");
+                // nextLessonBtn.classList.remove("disabled");
             }
         }, 1000); // Check every second
     }

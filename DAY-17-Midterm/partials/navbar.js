@@ -96,10 +96,10 @@ const loginModalHtml = `
       </div>
       <div class="modal-body">
         <form>
-        <div class="mb-3">
-            <label for="signupInputName" class="form-label">Username</label>
-            <input type="text" class="form-control rounded-pill border-0 custom-search" id="signupInputName" placeholder="Username" required>
-        </div>
+          <div class="mb-3">
+              <label for="signupInputName" class="form-label">Username</label>
+              <input type="text" class="form-control rounded-pill border-0 custom-search" id="signupInputName" placeholder="Username" required>
+          </div>
           <div class="mb-3">
             <label for="signupInputEmail" class="form-label">Email address</label>
             <input type="email" class="form-control rounded-pill border-0 custom-search" id="signupInputEmail" placeholder="Email" required>
@@ -110,7 +110,7 @@ const loginModalHtml = `
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="signupCheck" required>
-            <label class="form-check-label" for="signupCheck">I accept something policy</label>
+            <label class="form-check-label" for="signupCheck">I accept something policy <span><a href="">Learn more</a></span></label>
           </div>
           <button type="submit" class="btn btn-warning rounded-pill px-4">Sign Up</button>
           <button class="btn btn-border-none rounded-pill" data-bs-target="#loginModal" data-bs-toggle="modal">Back</button>

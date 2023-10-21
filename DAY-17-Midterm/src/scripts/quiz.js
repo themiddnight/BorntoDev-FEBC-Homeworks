@@ -79,13 +79,13 @@ function showResult() {
     // display score symbol
     for (let i = 0; i < totalQuestions; i++) {
         if (quizSet.questions[i].selected === quizSet.questions[i].correct) {
-            symbolColor = "lime";
+            symbolColor = "forestgreen";
         } else {
-            symbolColor = "red";
+            symbolColor = "brown";
         }
         scoreSymbolDiv.innerHTML += `
         <div class="position-relative">
-            <div class="position-absolute top-50 start-50 translate-middle text-black">${i + 1}</div>
+            <div class="position-absolute top-50 start-50 translate-middle text-white">${i + 1}</div>
             <svg class="shadow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="${symbolColor}" class="bi bi-circle-fill" viewBox="0 0 16 16">
             <circle cx="8" cy="8" r="8"/>
             </svg>

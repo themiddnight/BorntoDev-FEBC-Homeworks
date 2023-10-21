@@ -18,10 +18,10 @@ const footerHtml = `
           <form>
             <h5>Subscribe to our newsletter</h5>
             <p>Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-lg-row w-100 gap-3">
+            <div class="d-flex flex-column flex-lg-row w-100 gap-1">
               <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control bg-dark-subtle rounded-pill border-0" placeholder="Email address">
-              <button class="btn btn-outline-none rounded-pill" type="button">Subscribe</button>
+              <input id="newsletter1" type="text" class="form-control bg-dark rounded-pill border-0 px-4" placeholder="Email address">
+              <button class="btn btn-outline-none rounded-pill text-decoration-underline link-offset-2" type="button">Subscribe</button>
             </div>
           </form>
         </div>

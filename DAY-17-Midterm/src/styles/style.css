@@ -1,10 +1,56 @@
+body {
+    background: #111;
+    /* background-image: 
+        linear-gradient(to bottom, transparent 30%, #111 100%),
+        radial-gradient(at 16.0% 99.0%, hsl(29, 91%, 48%) 0px, transparent 50%), 
+        radial-gradient(at 1.0% 48.0%, hsl(324, 64%, 23%) 0px, transparent 50%), 
+        radial-gradient(at 51.0% 59.0%, hsl(45, 91%, 55%) 0px, transparent 50%), 
+        radial-gradient(at 84.0% 78.0%, hsl(146, 40%, 40%) 0px, transparent 50%), 
+        radial-gradient(at 7.0% 13.0%, hsl(301, 60%, 61%) 0px, transparent 50%); */
+    background-size: 100% 65vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-none {
+    background: none !important;
+}
+
+.hover {
+    transform: scale(1);
+    transition: 0.3s;
+}
+.hover:hover {
+    transform: scale(1.02);
+}
+
+.first-order {
+    position: relative;
+    order: -1;
+}
+.first-order::after {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    /* font-weight: bold; */
+    color: white;
+    content: "Popular";
+    background-color: brown;
+    /* box-shadow: 0 5px 10px 0px #00000088; */
+    padding-block: 8px;
+    padding-inline: 15px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.3s;
+}
+
 .custom-top__div {
-    padding-top: 48px !important;
+    padding-top: 60px !important;
 }
 
 .custom-nav {
     background-color: #00000088;
-    margin-bottom: -48px;
+    margin-bottom: -60px;
 }
 
 .custom-search {
@@ -44,7 +90,7 @@
 }
 
 .index-banner-img__div {
-    height: 500px;
+    height: 400px !important;
 }
 
 .custom-border-radius {
@@ -58,10 +104,12 @@
 }
 
 .courses-banner__div-title {
-    backdrop-filter: brightness(0.3); 
-    -webkit-backdrop-filter: brightness(0.3);
-    border-start-start-radius: 20px;
-    border-end-start-radius: 20px;
+    /* backdrop-filter: brightness(0.5) blur(20px);  */
+    /* -webkit-backdrop-filter: brightness(0.5) blur(20px); */
+    /* border-start-start-radius: 20px; */
+    /* border-end-start-radius: 20px; */
+    background-color: #00000088;
+    border-radius: 20px;
     padding-right: 300px !important;
 }
 
@@ -72,15 +120,15 @@
 .lesson-sidebar__div {
     width: 460px;
     height: 100vh;
-    padding-bottom: 48px;
+    padding-bottom: 60px;
 }
 
 .lesson-sidebar__subdiv {
     position: fixed;
-    bottom: 0;
+    bottom: 60;
     overflow-y: scroll;
     height: 100vh; 
-    padding-top: 48px;
+    padding-bottom: 60px;
 }
 
 .list-group-item.active {
@@ -129,8 +177,9 @@
     }
     .courses-banner__div-title {
         padding-top: 120px !important;
-        border-start-start-radius: 0px;
-        border-end-start-radius: 0px;
+        /* border-start-start-radius: 0px; */
+        /* border-end-start-radius: 0px; */
+        border-radius: 0px;
     }
 }
 
@@ -145,12 +194,10 @@
     .custom-dropdown {
         background-color: #00000066;
     }
-    .index-banner-img__div {
-        height: 530px;
-        filter: brightness(0.5);
-        margin-top: -48px;
-    }
     .custom-border-radius {
         border-radius: 0px !important;
+    }
+    .index-banner-img__div {
+        height: 440px !important;
     }
 }
