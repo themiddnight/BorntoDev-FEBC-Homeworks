@@ -69,11 +69,11 @@ const loginModalHtml = `
         <form>
           <div class="mb-3">
             <label for="loginInputEmail" class="form-label">Email address</label>
-            <input type="email" class="form-control rounded-pill border-0 custom-search" id="loginInputEmail" placeholder="Email" required>
+            <input type="email" class="form-control rounded-pill border-0 bg-light bg-opacity-10" id="loginInputEmail" placeholder="Email" required>
           </div>
           <div class="mb-3">
             <label for="loginInputPassword" class="form-label">Password</label>
-            <input type="password" class="form-control rounded-pill border-0 custom-search" placeholder="Password" required>
+            <input type="password" class="form-control rounded-pill border-0 bg-light bg-opacity-10" placeholder="Password" required>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="remembermeCheck">
@@ -98,19 +98,19 @@ const loginModalHtml = `
         <form>
           <div class="mb-3">
               <label for="signupInputName" class="form-label">Username</label>
-              <input type="text" class="form-control rounded-pill border-0 custom-search" id="signupInputName" placeholder="Username" required>
+              <input type="text" class="form-control rounded-pill border-0 bg-light bg-opacity-10" id="signupInputName" placeholder="Username" required>
           </div>
           <div class="mb-3">
             <label for="signupInputEmail" class="form-label">Email address</label>
-            <input type="email" class="form-control rounded-pill border-0 custom-search" id="signupInputEmail" placeholder="Email" required>
+            <input type="email" class="form-control rounded-pill border-0 bg-light bg-opacity-10" id="signupInputEmail" placeholder="Email" required>
           </div>
           <div class="mb-3">
             <label for="signupInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control rounded-pill border-0 custom-search" placeholder="Password" required>
+            <input type="password" class="form-control rounded-pill border-0 bg-light bg-opacity-10" placeholder="Password" required>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="signupCheck" required>
-            <label class="form-check-label" for="signupCheck">I accept something policy <span><a href="">Learn more</a></span></label>
+            <label class="form-check-label" for="signupCheck">I accept something policy. <span><a href="">Learn more</a></span></label>
           </div>
           <button type="submit" class="btn btn-warning rounded-pill px-4">Sign Up</button>
           <button class="btn btn-border-none rounded-pill" data-bs-target="#loginModal" data-bs-toggle="modal">Back</button>

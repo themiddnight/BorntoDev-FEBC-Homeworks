@@ -17,11 +17,13 @@ body {
 }
 
 .hover {
-    background-color: #ffffff00;
+    /* background-color: #ffffff00; */
+    filter: brightness(1);
     transition: 0.3s;
 }
 .hover:hover {
-    background-color: #33333388 !important;
+    /* background-color: #33333388 !important; */
+    filter: brightness(1.3);
 }
 
 .first-order {
@@ -121,14 +123,18 @@ body {
     padding-bottom: 60px;
 }
 
+.list-group-item {
+    background-color: #00000000;
+}
+
 .list-group-item.active {
-    background-color: #3e4144;
-    border-color: #3e4144;
+    background-color: #ffffff22;
+    border-color: #ffffff22;
 }
 
 .nav-link.active {
-    background-color: #3e4144 !important;
-    border-color: #3e4144 !important;
+    background-color: #000000aa !important;
+    border-color: #000000aa !important;
 }
 
 /* respinsive for full-hd and below */
