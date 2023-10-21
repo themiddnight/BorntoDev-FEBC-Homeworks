@@ -102,7 +102,7 @@ body {
     /* border-start-start-radius: 20px; */
     /* border-end-start-radius: 20px; */
     border-radius: 20px;
-    padding-right: 300px !important;
+    /* padding-right: 300px !important; */
 }
 
 .courses-card-img__div {
@@ -146,9 +146,9 @@ body {
     .index-banner-img__div {
         height: 400px;
     }
-    .courses-banner__div-title {
+    /* .courses-banner__div-title {
         padding-right: 3rem !important;
-    }
+    } */
 }
 
 /* respinsive for lg and below */
