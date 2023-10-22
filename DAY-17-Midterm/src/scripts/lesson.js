@@ -13,9 +13,6 @@ let checked_symbol = `
 let lessonID = 'lesson-1';
 let checkID = 'check-1';
 
-let quizBtn = document.getElementById(lessonID);
-let takeQuizBtn = document.getElementById("takeQuiz-btn");
-let nextLessonBtn = document.getElementById("nextLesson-btn");
 let checkSymbol = document.getElementById(checkID);
 
 // reference: https://developers.google.com/youtube/iframe_api_reference
@@ -47,9 +44,6 @@ function onPlayerStateChange(event) {
 
             if (duration - currentTime <= 10) {
                 checkSymbol.innerHTML = checked_symbol;
-                // quizBtn.classList.remove("disabled");
-                // takeQuizBtn.classList.remove("disabled");
-                // nextLessonBtn.classList.remove("disabled");
             }
         }, 1000); // Check every second
     }

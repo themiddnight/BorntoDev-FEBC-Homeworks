@@ -1,7 +1,7 @@
 const navbarHtml = `
 <nav class="navbar navbar-expand-lg sticky-top shadow bg-black bg-opacity-50 custom-nav backdrop-blur">
 <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand hover" href="index.html">
         <span class="fw-bold text-warning me-1">
             MIDDNIGHT
             <svg style="transform: translateY(-1px);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">

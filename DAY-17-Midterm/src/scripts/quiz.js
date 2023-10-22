@@ -54,7 +54,7 @@ function showQuestion(index) {
     quizCount.innerText = `${index + 1}/${quizSet.questions.length}`;
     quizQuestion.innerText = quizSet.questions[index].question;
     // get radio input in 'quiz-question' id
-    const radioInputs = document.querySelectorAll('#quiz-options input[type="radio"]');
+    let radioInputs = document.querySelectorAll('#quiz-options input[type="radio"]');
     for (let i = 0; i < radioInputs.length; i++) {
         // replace the label of radio with the options from the quizSet
         document.querySelectorAll('#quiz-options label')[i].innerText = quizSet.questions[index].options[i];
@@ -101,7 +101,7 @@ function showResult() {
 document.querySelectorAll('#quiz-options input[type="radio"]').forEach((radioInput) => {
     radioInput.addEventListener("change", () => {
         // get value of selected radio input in 'quiz-question' id
-        const selectedOption = document.querySelector('#quiz-options input[type="radio"]:checked');
+        let selectedOption = document.querySelector('#quiz-options input[type="radio"]:checked');
         // keep the selected choice
         quizSet.questions[currentQuestion].selected = selectedOption.value;
     });
