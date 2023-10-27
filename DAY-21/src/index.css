@@ -1,7 +1,7 @@
 .light-mode {
 	--bg: #eee;
 	--text: #111;
-	--btn-theme-bg: #111111aa;
+	--btn-theme-bg: #222;
 	--btn-theme-text: #eee;
 	--btn-bg: rgb(0, 140, 255);
 	--btn-text: white;
@@ -15,7 +15,7 @@
 .dark-mode {
 	--bg: #111;
 	--text: #eee;
-	--btn-theme-bg: #eeeeeeaa;
+	--btn-theme-bg: #eee;
 	--btn-theme-text: #111;
 	--btn-bg: rgb(0, 140, 255);
 	--btn-text: white;
