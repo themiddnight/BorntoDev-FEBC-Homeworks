@@ -1,7 +1,7 @@
 .light-mode {
 	--bg: #eee;
 	--text: #111;
-	--btn-theme-bg: #111;
+	--btn-theme-bg: #111111aa;
 	--btn-theme-text: #eee;
 	--btn-bg: rgb(0, 140, 255);
 	--btn-text: white;
@@ -15,7 +15,7 @@
 .dark-mode {
 	--bg: #111;
 	--text: #eee;
-	--btn-theme-bg: #eee;
+	--btn-theme-bg: #eeeeeeaa;
 	--btn-theme-text: #111;
 	--btn-bg: rgb(0, 140, 255);
 	--btn-text: white;
@@ -76,7 +76,7 @@ button:focus-visible {
 
 input {
 	padding: 0.5em;
-	margin-inline: 0.7em;
+	/* margin-inline: 0.7em; */
 	border-radius: 0.5em;
 
 	border: 1px solid var(--input-border);
@@ -95,7 +95,6 @@ input {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	margin: 20px;
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -130,4 +129,17 @@ input {
 	padding-block: 1rem;
 
 	background-color: var(--card-header-footer-bg);
+}
+
+
+@media (max-width: 640px) {
+	.card-header {
+		padding-inline: 1rem;
+	}
+	.card-body {
+		padding-inline: 1rem;
+	}
+	.card-footer {
+		padding-inline: 1rem;
+	}
 }

@@ -20,7 +20,7 @@ export const ThemeButton = (): React.ReactElement => {
 	}
 
 	return (
-		<div style={{ position: 'fixed', top: '50px', right: '50px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+		<div style={{ position: 'fixed', bottom: '50px', right: '50px', display: 'flex', alignItems: 'center', gap: '10px' }}>
 			<button onClick={onChangeTheme} className='btn-theme'>{theme.btnText}</button>
 		</div>
 	)

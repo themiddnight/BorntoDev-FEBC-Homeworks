@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Card title="คุณควรดื่มน้ำวันละเท่าไหร่ ?" foot="1 แก้ว = 250 มล., ปริมาณน้ำ = น้ำหนัก(Kg) x 2.2 x 30/2">
+      <Card title="คุณควรดื่มน้ำวันละเท่าไหร่ ?" foot="1 แก้ว = 250 มล., ปริมาณน้ำ = น้ำหนัก(กก.) x 2.2 x 30/2">
         <WaterCalc weight={weight} />
         <WeightInput setWeight={setWeight} />
       </Card>

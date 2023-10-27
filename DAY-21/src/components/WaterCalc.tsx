@@ -14,7 +14,7 @@ export const WaterCalc = ({ weight }: WaterCalcProps): React.ReactElement => {
 
 	return (
 		<div>
-			<h2>ควรดื่มวันละ {resultStr} มิลลิลิตร</h2>
+			<h2>ควรดื่มวันละ {resultStr} มล.</h2>
 			<p style={{ marginTop: 10 }}>หรือประมาณ {glassesStr} แก้ว/วัน</p>
 		</div>
 	)
