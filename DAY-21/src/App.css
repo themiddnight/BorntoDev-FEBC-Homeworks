@@ -1,0 +1,41 @@
+:root {
+	--transition: 0.5s ease-in-out;
+}
+
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.light-mode {
+	--bg-img: url(https://images.pexels.com/photos/40784/drops-of-water-water-nature-liquid-40784.jpeg?auto=compress&cs=tinysrgb&w=1600);
+	--input-bg: #ffffff88 !important;
+	--card-bg: #ffffff44 !important;
+	--card-header-footer-bg: #dddddd44 !important;
+}
+
+.dark-mode {
+	--bg-img: url(https://images.pexels.com/photos/236968/pexels-photo-236968.jpeg?auto=compress&cs=tinysrgb&w=1600);
+	--input-bg: #00000088 !important;
+	--card-bg: #22222244 !important;
+	--card-header-footer-bg: #33333344 !important;
+}
+
+body {
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	background-image: var(--bg-img);
+	transition: background-image var(--transition);
+}
+
+.card-body {
+	align-items: center !important;
+}

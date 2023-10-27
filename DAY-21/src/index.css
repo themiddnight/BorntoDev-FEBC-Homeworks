@@ -1,0 +1,133 @@
+.light-mode {
+	--bg: #eee;
+	--text: #111;
+	--btn-theme-bg: #111;
+	--btn-theme-text: #eee;
+	--btn-bg: rgb(0, 140, 255);
+	--btn-text: white;
+	--input-bg: #ffffff;
+	--input-text: #111;
+	--input-border: #ccc;
+	--card-bg: #ffffff;
+	--card-header-footer-bg: #dddddd;
+}
+
+.dark-mode {
+	--bg: #111;
+	--text: #eee;
+	--btn-theme-bg: #eee;
+	--btn-theme-text: #111;
+	--btn-bg: rgb(0, 140, 255);
+	--btn-text: white;
+	--input-bg: #000000;
+	--input-text: #eee;
+	--input-border: #333;
+	--card-bg: #222222;
+	--card-header-footer-bg: #333333;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--transition: 0.5s ease-in-out;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+
+	transition: background-image var(--transition), background-color var(--transition), color var(--transition);
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	cursor: pointer;
+
+	background-color: var(--btn-bg);
+	color: var(--btn-text);
+
+	transition: border-color 0.25s;
+}
+
+button:hover {
+	border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+	padding: 0.5em;
+	margin-inline: 0.7em;
+	border-radius: 0.5em;
+
+	border: 1px solid var(--input-border);
+	background-color: var(--input-bg);
+	color: var(--input-text);
+}
+
+.btn-theme {
+	background-color: var(--btn-theme-bg);
+	color: var(--btn-theme-text);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	margin: 20px;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+
+	border: 1px solid var(--input-border);
+	background-color: var(--card-bg);
+	color: var(--text);
+}
+
+.card-header {
+	width: 100%;
+	padding-inline: 3rem;
+	padding-block: 1.5rem;
+
+	background-color: var(--card-header-footer-bg);
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 100%;
+	padding-inline: 3rem;
+	padding-block: 1rem;
+}
+
+.card-footer {
+	width: 100%;
+	padding-inline: 3rem;
+	padding-block: 1rem;
+
+	background-color: var(--card-header-footer-bg);
+}
